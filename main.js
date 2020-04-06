@@ -28,6 +28,10 @@ for (let i = 0; i < 25; i++) {
 
 
 function checkResult(id, value) {
+    if (win||faild ) {
+        return;
+    }
+
     if (firstbox) {
         startTime = Math.floor(Date.now() / 1000);
         startTimeCounter();
@@ -70,7 +74,7 @@ function startTimeCounter() {
     s = checkTime(s); 
     m = checkTime(m); 
     document.getElementById("timer").innerHTML = m + " : "+ s; 
-    if (win == false && faild == false) {
+    if (!win  && !faild) {
         var t = setTimeout(startTimeCounter, 500); 
     }
 }

@@ -45,9 +45,28 @@ body {
   font-size: 50px;
 }
 
-.box p {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100%;
+
+
+@media (max-width: 600px) {
+  .header h1{
+    text-align: center;
+    display: block;
+  }
+  .counter{
+    text-align: center;
+    display: block;
+    float:none !important;
+  }
+  .dis{
+    text-align: center;
+  }
+  .box{
+    height: 80px;
+  width: 80px;
+  font-size: 30px;
+  }
+  .area {
+    padding: 0 5%;
+  }
+
 }
