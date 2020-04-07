@@ -7,7 +7,6 @@ let firstbox;
 let faild;
 let win;
 let score;
-let restart;
 
 function startTheGame() {
 
@@ -19,8 +18,6 @@ function startTheGame() {
     firstbox = true;
     faild = false;
     win = false;
-
-
     for (let index = 1; index <= 25; index++) {
         numberTo25.push(index);
     }
@@ -76,11 +73,7 @@ function checkResult(id, value) {
     }
 }
 
-function startTimeCounter() {
-    if(restart){
-        restart=false;
-        return;
-    }
+function startTimeCounter() { 
     var now = Math.floor(Date.now() / 1000);
     var diff = now - startTime;
     var m = Math.floor(diff / 60);
@@ -98,14 +91,7 @@ function checkTime(i) {
     return i;
 }
 
-function Restart() {
-    restart=true;
-    startTheGame();
-    document.querySelector("#score").innerHTML="0";
-    document.getElementById("timer").innerHTML =  "00 : 00";
 
-
-}
 startTheGame();
 
 
